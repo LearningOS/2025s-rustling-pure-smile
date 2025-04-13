@@ -13,7 +13,7 @@ pub fn foo_if_fizz(fizzish: &str) -> &str {
         "bar"
     } else {
         "baz"
-    }
+    } 
 }
 
 // No test changes needed!

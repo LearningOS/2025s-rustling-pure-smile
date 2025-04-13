@@ -7,7 +7,7 @@
 // for a hint.
 
 
-fn main() {
+fn main() { 
     // Booleans (`bool`)
 
     let is_morning = true;

@@ -17,7 +17,7 @@ fn main() {
         println!("Alphabetical!");
     } else if my_first_initial.is_numeric() {
         println!("Numerical!");
-    } else {
+    } else { 
         println!("Neither alphabetic nor numeric!");
     }
 
