@@ -12,13 +12,13 @@ Option错误处理‌
 ‌Vec错误使用‌
 ‌变量交换错误‌ 
 */
-use std::mem;
+
 #[allow(unused_variables, unused_assignments)]
 fn main() {
     let my_option: Option<()> = None;
-    if my_option.is_none() {
-        // my_option.is_none()检查后调用unwrap会导致panic
-        panic!("my_option不应为None"); // 使用expect提供明确错误信息
+    match my_option {
+        Some(_) => println!("Got Some value!"),
+        None => println!("Expected Some value but got None"),
     }
 
     let my_arr = &[
@@ -38,7 +38,6 @@ fn main() {
     // value_a = value_b;
     // value_b = value_a;
     // 正确交换变量
-    
-    mem::swap(&mut value_a, &mut value_b);  // 使用内存交换函数
+    std::mem::swap(&mut value_a, &mut value_b);  // 使用内存交换函数
     println!("value a: {}; value b: {}", value_a, value_b);
 }
